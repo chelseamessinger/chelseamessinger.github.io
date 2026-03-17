@@ -1,41 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chelsea J. Messinger's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chelsea J. Messinger, MD, PhD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body { height: 100%; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 28px;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 16px;
+    }
+
+    .headshot {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      filter: grayscale(15%);
+    }
+
+    h1 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      margin-bottom: 3px;
+      white-space: nowrap;
+    }
+
+    .subtitle { font-size: 0.82rem; color: #666; }
+
+    hr {
+      border: none;
+      border-top: 1px solid #eee;
+      margin: 14px 0;
+    }
+
+    .bio {
+      font-size: 0.85rem;
+      color: #444;
+      line-height: 1.65;
+    }
+
+    .label {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #bbb;
+      margin-bottom: 8px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 32px;
+    }
+
+    .stack { display: flex; flex-direction: column; gap: 6px; }
+
+    .stack-item strong {
+      font-size: 0.81rem;
+      font-weight: 500;
+      color: #222;
+      display: block;
+      line-height: 1.3;
+    }
+
+    .stack-item span {
+      font-size: 0.74rem;
+      color: #bbb;
+      line-height: 1.3;
+      display: block;
+    }
+
+    .pub-list { display: flex; flex-direction: column; gap: 8px; }
+
+    .pub { font-size: 0.81rem; color: #444; line-height: 1.4; }
+
+    .pub a {
+      color: #333;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #ddd;
+      transition: color 0.15s, text-decoration-color 0.15s;
+    }
+    .pub a:hover { color: #2563eb; text-decoration-color: #2563eb; }
+
+    .pub-meta { font-size: 0.72rem; color: #bbb; margin-top: 1px; }
+
+    .pub-more { font-size: 0.75rem; color: #bbb; margin-top: 6px; }
+    .pub-more a { color: #999; text-decoration: underline; text-underline-offset: 3px; }
+    .pub-more a:hover { color: #2563eb; }
+
+    .links { display: flex; gap: 16px; flex-wrap: wrap; }
+    .links a {
+      font-size: 0.82rem;
+      color: #666;
+      text-decoration: none;
+    }
+    .links a:hover { color: #2563eb; }
+
+    .reach-out {
+      font-size: 0.8rem;
+      color: #bbb;
+      margin-bottom: 8px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Chelsea J. Messinger</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome to my portfolio! I am a passionate developer with experience in creating web applications.
-        </p>
-    </section>
-    <section id="projects">
-        <h2>My Projects</h2>
-        <ul>
-            <li><a href="project1.html">Project 1</a></li>
-            <li><a href="project2.html">Project 2</a></li>
-            <li><a href="project3.html">Project 3</a></li>
-        </ul>
-    </section>
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:chelsea@example.com">chelsea@example.com</a></p>
-    </section>
-    <footer>
-        <p>&copy; 2026 Chelsea J. Messinger. All rights reserved.</p>
-    </footer>
+
+  <div class="header">
+    <div>
+      <h1>Chelsea J. Messinger, MD, PhD</h1>
+      <p class="subtitle">Anesthesiology Resident · Massachusetts General Hospital</p>
+    </div>
+    <img class="headshot" src="headshot.jpg" alt="Chelsea Messinger">
+  </div>
+
+  <p class="bio">I am an anesthesiology resident with interests in cardiac anesthesiology, critical care, and perioperative outcomes research. My work applies epidemiologic and causal inference methods to clinical questions.</p>
+
+  <hr>
+
+  <div class="two-col">
+    <div>
+      <p class="label">Roles</p>
+      <div class="stack">
+        <div class="stack-item">
+          <strong>Resident Physician, Research Track</strong>
+          <span>Anesthesiology · MGH</span>
+        </div>
+        <div class="stack-item">
+          <strong>Editorial Fellow</strong>
+          <span>British Journal of Anaesthesia</span>
+        </div>
+        <div class="stack-item">
+          <strong>Post-Doctoral Research Collaborator</strong>
+          <span>CAUSALab · Harvard Chan</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="label">Education</p>
+      <div class="stack">
+        <div class="stack-item">
+          <strong>MD</strong>
+          <span>Harvard Medical School</span>
+        </div>
+        <div class="stack-item">
+          <strong>PhD, Epidemiology</strong>
+          <span>Harvard T.H. Chan School of Public Health</span>
+        </div>
+        <div class="stack-item">
+          <strong>BA, History of Science &amp; Medicine</strong>
+          <span>Yale University · Fulbright Scholar</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <p class="label">Selected Publications</p>
+  <div class="pub-list">
+    <div class="pub">
+      <a href="https://pubmed.ncbi.nlm.nih.gov/40067038/" target="_blank" rel="noopener">Emulating Target Trials to Study Perioperative and Critical Care Interventions with Observational Data: Promise and Limitations</a>
+      <p class="pub-meta">Messinger CJ, Bateman BT, Wanis KN · <em>Anesthesiology</em>, 2025</p>
+    </div>
+    <div class="pub">
+      <a href="https://pubmed.ncbi.nlm.nih.gov/32926077/" target="_blank" rel="noopener">Association Between Congenital Cytomegalovirus and the Prevalence at Birth of Microcephaly in the United States</a>
+      <p class="pub-meta">Messinger CJ, Lipsitch M, Bateman BT, et al. · <em>JAMA Pediatrics</em>, 2020</p>
+    </div>
+    <div class="pub">
+      <a href="https://pubmed.ncbi.nlm.nih.gov/40645472/" target="_blank" rel="noopener">Effect of Transabdominal versus Transvaginal Cerclage on Preterm Birth and Neonatal Outcomes Among Patients with History of Cervical Insufficiency</a>
+      <p class="pub-meta">Messinger CJ, Hernández-Díaz S, Hofman A, et al. · <em>American Journal of Obstetrics &amp; Gynecology</em>, 2025</p>
+    </div>
+    <div class="pub">
+      <a href="https://doi.org/10.1016/j.bja.2025.10.007" target="_blank" rel="noopener">From Association to Action: Why Causal Estimands Matter in Perioperative Studies of GLP-1 Receptor Agonist Outcomes</a>
+      <p class="pub-meta">Messinger CJ, Kelleher E · <em>British Journal of Anaesthesia</em>, 2025</p>
+    </div>
+  </div>
+  <p class="pub-more">Full list on <a href="https://www.ncbi.nlm.nih.gov/myncbi/1dkYab9Nbx7Af/bibliography/public/" target="_blank" rel="noopener">PubMed</a></p>
+
+  <hr>
+
+  <p class="reach-out">Working on similar problems? Feel free to reach out.</p>
+  <div class="links">
+    <a href="mailto:cjmessinger@mgb.org">cjmessinger@mgb.org</a>
+    <a href="https://www.linkedin.com/in/chelsea-messinger-2aa8a344/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://twitter.com/ChelsMessinger" target="_blank" rel="noopener">@ChelsMessinger</a>
+  </div>
+
 </body>
 </html>
