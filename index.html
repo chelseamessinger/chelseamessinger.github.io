@@ -32,7 +32,6 @@
       margin-bottom: 16px;
     }
 
-
     .headshot {
       width: 74px;
       height: 74px;
@@ -43,13 +42,17 @@
     }
 
     h1 {
-  font-size: 1.15rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  margin-bottom: 1px;
-}
+      font-size: 1.15rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      margin-bottom: 1px;
+    }
 
-    .subtitle { font-size: 0.82rem; color: #666; margin-top: 1px; }
+    .subtitle {
+      font-size: 0.82rem;
+      color: #666;
+      margin-top: 1px;
+    }
 
     hr {
       border: none;
@@ -78,7 +81,11 @@
       gap: 0 32px;
     }
 
-    .stack { display: flex; flex-direction: column; gap: 6px; }
+    .stack {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
 
     .stack-item strong {
       font-size: 0.81rem;
@@ -95,9 +102,17 @@
       display: block;
     }
 
-    .pub-list { display: flex; flex-direction: column; gap: 8px; }
+    .pub-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
 
-    .pub { font-size: 0.81rem; color: #444; line-height: 1.4; }
+    .pub {
+      font-size: 0.81rem;
+      color: #444;
+      line-height: 1.4;
+    }
 
     .pub a {
       color: #333;
@@ -106,44 +121,90 @@
       text-decoration-color: #ddd;
       transition: color 0.15s, text-decoration-color 0.15s;
     }
-    .pub a:hover { color: #2563eb; text-decoration-color: #2563eb; }
 
-    .pub-meta { font-size: 0.72rem; color: #bbb; margin-top: 1px; }
+    .pub a:hover {
+      color: #2563eb;
+      text-decoration-color: #2563eb;
+    }
 
-    .pub-more { font-size: 0.75rem; color: #bbb; margin-top: 6px; }
-    .pub-more a { color: #999; text-decoration: underline; text-underline-offset: 3px; }
-    .pub-more a:hover { color: #2563eb; }
+    .pub-meta {
+      font-size: 0.72rem;
+      color: #bbb;
+      margin-top: 1px;
+    }
 
-    .links { display: flex; gap: 16px; flex-wrap: wrap; }
+    .pub-more {
+      font-size: 0.75rem;
+      color: #bbb;
+      margin-top: 6px;
+    }
+
+    .pub-more a {
+      color: #999;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .pub-more a:hover {
+      color: #2563eb;
+    }
+
+    .links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
     .links a {
       font-size: 0.82rem;
       color: #666;
       text-decoration: none;
     }
-    .links a:hover { color: #2563eb; }
+
+    .links a:hover {
+      color: #2563eb;
+    }
 
     .reach-out {
       font-size: 0.8rem;
       color: #bbb;
       margin-bottom: 8px;
     }
+
+    @media (max-width: 560px) {
+      body {
+        padding: 36px 22px;
+      }
+
+      .two-col {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .header {
+        align-items: flex-start;
+      }
+    }
+
     @media (max-width: 480px) {
-  h1 { font-size: 1.1rem; }
-}
+      h1 {
+        font-size: 1.1rem;
+      }
+    }
   </style>
 </head>
+
 <body>
-  
-<div class="header">
-  <img class="headshot" src="headshot.jpeg" alt="Chelsea Messinger">
-  <div>
-    <h1>Chelsea Messinger, MD, PhD</h1>
-    <p class="subtitle">Anesthesiology Resident · Massachusetts General Hospital</p>
+
+  <div class="header">
+    <img class="headshot" src="headshot.jpeg" alt="Headshot of Chelsea Messinger">
+    <div>
+      <h1>Chelsea Messinger, MD, PhD</h1>
+      <p class="subtitle">Anesthesiology Resident · Massachusetts General Hospital</p>
+    </div>
   </div>
-</div>
 
-
-  <p class="bio">I am an anesthesiology resident with interests in cardiac anesthesiology, critical care, and perioperative outcomes research. My work applies epidemiologic and causal inference methods to clinical questions.</p>
+  <p class="bio">I am an anesthesiology resident interested in cardiac anesthesiology, critical care, and perioperative outcomes research. My work uses epidemiologic and causal inference methods to study clinically actionable questions in perioperative care.</p>
 
   <hr>
 
@@ -156,15 +217,12 @@
           <span>Anesthesiology · MGH</span>
         </div>
         <div class="stack-item">
-          <strong>Editorial Fellow</strong>
-          <span>British Journal of Anaesthesia</span>
-        </div>
-        <div class="stack-item">
-          <strong>Post-Doctoral Research Collaborator</strong>
+          <strong>Postdoctoral Research Collaborator</strong>
           <span>CAUSALab · Harvard Chan</span>
         </div>
       </div>
     </div>
+
     <div>
       <p class="label">Education</p>
       <div class="stack">
@@ -186,25 +244,43 @@
 
   <hr>
 
+  <p class="label">Editorial Activities</p>
+  <div class="stack">
+    <div class="stack-item">
+      <strong>Editorial Fellow</strong>
+      <span>British Journal of Anaesthesia</span>
+    </div>
+    <div class="stack-item">
+      <strong>Ad Hoc Reviewer</strong>
+      <span><em>Anesthesiology</em> · <em>Intensive Care Medicine</em> · <em>Critical Care Medicine</em> · <em>Journal of Cardiothoracic and Vascular Anesthesia</em></span>
+    </div>
+  </div>
+
+  <hr>
+
   <p class="label">Selected Publications</p>
   <div class="pub-list">
     <div class="pub">
       <a href="https://pubmed.ncbi.nlm.nih.gov/40067038/" target="_blank" rel="noopener">Emulating Target Trials to Study Perioperative and Critical Care Interventions with Observational Data: Promise and Limitations</a>
       <p class="pub-meta">Messinger CJ, Bateman BT, Wanis KN · <em>Anesthesiology</em>, 2025</p>
     </div>
+
     <div class="pub">
       <a href="https://pubmed.ncbi.nlm.nih.gov/32926077/" target="_blank" rel="noopener">Association Between Congenital Cytomegalovirus and the Prevalence at Birth of Microcephaly in the United States</a>
       <p class="pub-meta">Messinger CJ, Lipsitch M, Bateman BT, et al. · <em>JAMA Pediatrics</em>, 2020</p>
     </div>
+
     <div class="pub">
       <a href="https://pubmed.ncbi.nlm.nih.gov/40645472/" target="_blank" rel="noopener">Effect of Transabdominal versus Transvaginal Cerclage on Preterm Birth and Neonatal Outcomes Among Patients with History of Cervical Insufficiency</a>
       <p class="pub-meta">Messinger CJ, Hernández-Díaz S, Hofman A, et al. · <em>American Journal of Obstetrics &amp; Gynecology</em>, 2025</p>
     </div>
+
     <div class="pub">
       <a href="https://doi.org/10.1016/j.bja.2025.10.007" target="_blank" rel="noopener">From Association to Action: Why Causal Estimands Matter in Perioperative Studies of GLP-1 Receptor Agonist Outcomes</a>
       <p class="pub-meta">Messinger CJ, Kelleher E · <em>British Journal of Anaesthesia</em>, 2025</p>
     </div>
   </div>
+
   <p class="pub-more">Full list on <a href="https://www.ncbi.nlm.nih.gov/myncbi/1dkYab9Nbx7Af/bibliography/public/" target="_blank" rel="noopener">PubMed</a></p>
 
   <hr>
