@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -23,6 +24,18 @@
       max-width: 600px;
       margin: 0 auto;
       padding: 48px 28px 48px;
+    }
+
+    a {
+      color: #555;
+      text-decoration: none;
+      border-bottom: 1px solid #d6d6d6;
+      transition: color 0.18s ease, border-color 0.18s ease;
+    }
+
+    a:hover {
+      color: #111;
+      border-bottom-color: #888;
     }
 
     .header {
@@ -102,6 +115,18 @@
       display: block;
     }
 
+    .bio a,
+    .stack-item a {
+      color: #4a4a4a;
+      border-bottom: 1px solid #d0d0d0;
+    }
+
+    .bio a:hover,
+    .stack-item a:hover {
+      color: #111;
+      border-bottom-color: #888;
+    }
+
     .pub-list {
       display: flex;
       flex-direction: column;
@@ -116,15 +141,14 @@
 
     .pub a {
       color: #333;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      text-decoration-color: #ddd;
-      transition: color 0.15s, text-decoration-color 0.15s;
+      text-decoration: none;
+      border-bottom: 1px solid #d8d8d8;
+      transition: color 0.18s ease, border-color 0.18s ease;
     }
 
     .pub a:hover {
-      color: #2563eb;
-      text-decoration-color: #2563eb;
+      color: #111;
+      border-bottom-color: #777;
     }
 
     .pub-meta {
@@ -140,13 +164,14 @@
     }
 
     .pub-more a {
-      color: #999;
-      text-decoration: underline;
-      text-underline-offset: 3px;
+      color: #888;
+      text-decoration: none;
+      border-bottom: 1px solid #ddd;
     }
 
     .pub-more a:hover {
-      color: #2563eb;
+      color: #333;
+      border-bottom-color: #999;
     }
 
     .links {
@@ -159,10 +184,13 @@
       font-size: 0.82rem;
       color: #666;
       text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.18s ease, border-color 0.18s ease;
     }
 
     .links a:hover {
-      color: #2563eb;
+      color: #222;
+      border-bottom-color: #aaa;
     }
 
     .reach-out {
@@ -205,79 +233,81 @@
   </div>
 
   <p class="bio">
-  I am an anesthesiology resident at <a href="https://www.massgeneral.org/anesthesia/education-and-training/residency/resident-profiles" target="_blank" rel="noopener">Massachusetts General Hospital</a> and a postdoctoral research collaborator at <a href="https://hsph.harvard.edu/research/causalab/who-we-are/" target="_blank" rel="noopener">CAUSALab</a> at the Harvard T.H. Chan School of Public Health. My work uses epidemiologic and causal inference methods to study clinically actionable questions in perioperative care.
-</p>
+    I am an anesthesiology resident at <a href="https://www.massgeneral.org/anesthesia/education-and-training/residency/resident-profiles" target="_blank" rel="noopener">Massachusetts General Hospital</a> and a postdoctoral research collaborator at <a href="https://hsph.harvard.edu/research/causalab/who-we-are/" target="_blank" rel="noopener">CAUSALab</a> at the Harvard T.H. Chan School of Public Health. My work uses epidemiologic and causal inference methods to study clinically actionable questions in perioperative care.
+  </p>
 
-<hr>
+  <hr>
 
-<div class="two-col">
-  <div>
-    <p class="label">Current</p>
-    <div class="stack">
-      <div class="stack-item">
-        <strong>Resident Physician, Research Track</strong>
-        <span>Anesthesiology · MGH</span>
+  <div class="two-col">
+    <div>
+      <p class="label">Current</p>
+      <div class="stack">
+        <div class="stack-item">
+          <strong>Resident Physician, Research Track</strong>
+          <span>Anesthesiology · MGH</span>
+        </div>
+        <div class="stack-item">
+          <strong>Postdoctoral Research Collaborator</strong>
+          <span><a href="https://hsph.harvard.edu/research/causalab/who-we-are/" target="_blank" rel="noopener">CAUSALab</a> · Harvard Chan</span>
+        </div>
+        <div class="stack-item">
+          <strong>Editorial Fellow</strong>
+          <span><em>British Journal of Anaesthesia</em></span>
+        </div>
       </div>
-      <div class="stack-item">
-        <strong>Postdoctoral Research Collaborator</strong>
-        <span><a href="https://hsph.harvard.edu/research/causalab/who-we-are/" target="_blank" rel="noopener">CAUSALab</a> · Harvard Chan</span>
-      </div>
-      <div class="stack-item">
-        <strong>Editorial Fellow</strong>
-        <span><em>British Journal of Anaesthesia</em></span>
+    </div>
+
+    <div>
+      <p class="label">Training</p>
+      <div class="stack">
+        <div class="stack-item">
+          <strong>MD</strong>
+          <span>Harvard Medical School</span>
+        </div>
+        <div class="stack-item">
+          <strong>PhD, Epidemiology</strong>
+          <span>Harvard T.H. Chan School of Public Health</span>
+        </div>
+        <div class="stack-item">
+          <strong>BA, History of Science &amp; Medicine</strong>
+          <span>Yale University · Fulbright Scholar</span>
+        </div>
       </div>
     </div>
   </div>
 
-  <div>
-    <p class="label">Training</p>
-    <div class="stack">
-      <div class="stack-item">
-        <strong>MD</strong>
-        <span>Harvard Medical School</span>
-      </div>
-      <div class="stack-item">
-        <strong>PhD, Epidemiology</strong>
-        <span><a href="YOUR_DISSERTATION_URL" target="_blank" rel="noopener">Harvard T.H. Chan School of Public Health</a></span>
-      </div>
-      <div class="stack-item">
-        <strong>BA, History of Science &amp; Medicine</strong>
-        <span>Yale University · Fulbright Scholar</span>
-      </div>
-    </div>
-  </div>
-</div>
   <hr>
 
   <p class="label">Selected Publications</p>
-<div class="pub-list">
-  <div class="pub">
-    <a href="https://pubmed.ncbi.nlm.nih.gov/40067038/" target="_blank" rel="noopener">Emulating Target Trials to Study Perioperative and Critical Care Interventions with Observational Data: Promise and Limitations</a>
-    <p class="pub-meta">Messinger CJ, Bateman BT, Wanis KN · <em>Anesthesiology</em>, 2025</p>
+  <div class="pub-list">
+    <div class="pub">
+      <a href="https://pubmed.ncbi.nlm.nih.gov/40067038/" target="_blank" rel="noopener">Emulating Target Trials to Study Perioperative and Critical Care Interventions with Observational Data: Promise and Limitations</a>
+      <p class="pub-meta">Messinger CJ, Bateman BT, Wanis KN · <em>Anesthesiology</em>, 2025</p>
+    </div>
+
+    <div class="pub">
+      <a href="https://pubmed.ncbi.nlm.nih.gov/41692628/" target="_blank" rel="noopener">Operating Room Extubation After Cardiac Surgery: A Promising Practice or a Product of Selection Bias?</a>
+      <p class="pub-meta">Messinger CJ, Hall E, Smith MR, et al. · <em>Journal of Cardiothoracic and Vascular Anesthesia</em>, 2026</p>
+    </div>
+
+    <div class="pub">
+      <a href="https://doi.org/10.1016/j.bja.2025.10.007" target="_blank" rel="noopener">From Association to Action: Why Causal Estimands Matter in Perioperative Studies of GLP-1 Receptor Agonist Outcomes</a>
+      <p class="pub-meta">Messinger CJ, Kelleher E · <em>British Journal of Anaesthesia</em>, 2025</p>
+    </div>
+
+    <div class="pub">
+      <a href="https://pubmed.ncbi.nlm.nih.gov/32926077/" target="_blank" rel="noopener">Association Between Congenital Cytomegalovirus and the Prevalence at Birth of Microcephaly in the United States</a>
+      <p class="pub-meta">Messinger CJ, Lipsitch M, Bateman BT, et al. · <em>JAMA Pediatrics</em>, 2020</p>
+    </div>
+
+    <div class="pub">
+      <a href="https://pubmed.ncbi.nlm.nih.gov/40645472/" target="_blank" rel="noopener">Effect of Transabdominal versus Transvaginal Cerclage on Preterm Birth and Neonatal Outcomes Among Patients with History of Cervical Insufficiency</a>
+      <p class="pub-meta">Messinger CJ, Hernández-Díaz S, Hofman A, et al. · <em>American Journal of Obstetrics &amp; Gynecology</em>, 2025</p>
+    </div>
   </div>
 
-  <div class="pub">
-    <a href="https://pubmed.ncbi.nlm.nih.gov/41692628/" target="_blank" rel="noopener">Operating Room Extubation After Cardiac Surgery: A Promising Practice or a Product of Selection Bias?</a>
-    <p class="pub-meta">Messinger CJ, Hall E, Smith MR, et al. · <em>Journal of Cardiothoracic and Vascular Anesthesia</em>, 2026</p>
-  </div>
+  <p class="pub-more">Full list on <a href="https://www.ncbi.nlm.nih.gov/myncbi/1dkYab9Nbx7Af/bibliography/public/" target="_blank" rel="noopener">PubMed</a></p>
 
-  <div class="pub">
-    <a href="https://doi.org/10.1016/j.bja.2025.10.007" target="_blank" rel="noopener">From Association to Action: Why Causal Estimands Matter in Perioperative Studies of GLP-1 Receptor Agonist Outcomes</a>
-    <p class="pub-meta">Messinger CJ, Kelleher E · <em>British Journal of Anaesthesia</em>, 2025</p>
-  </div>
-
-  <div class="pub">
-    <a href="https://pubmed.ncbi.nlm.nih.gov/32926077/" target="_blank" rel="noopener">Association Between Congenital Cytomegalovirus and the Prevalence at Birth of Microcephaly in the United States</a>
-    <p class="pub-meta">Messinger CJ, Lipsitch M, Bateman BT, et al. · <em>JAMA Pediatrics</em>, 2020</p>
-  </div>
-
-  <div class="pub">
-    <a href="https://pubmed.ncbi.nlm.nih.gov/40645472/" target="_blank" rel="noopener">Effect of Transabdominal versus Transvaginal Cerclage on Preterm Birth and Neonatal Outcomes Among Patients with History of Cervical Insufficiency</a>
-    <p class="pub-meta">Messinger CJ, Hernández-Díaz S, Hofman A, et al. · <em>American Journal of Obstetrics &amp; Gynecology</em>, 2025</p>
-  </div>
-</div>
-
-<p class="pub-more">Full list on <a href="https://www.ncbi.nlm.nih.gov/myncbi/1dkYab9Nbx7Af/bibliography/public/" target="_blank" rel="noopener">PubMed</a></p>
   <hr>
 
   <p class="reach-out">Working on similar problems? Feel free to reach out.</p>
